@@ -65,6 +65,23 @@ java -jar mule-secureprops-extension.jar decrypt ./example.yaml AES CBC dummyKey
 ## Requirements
 - Java 17+
 - Maven (for build)
+- Maven dependencies must be available (e.g., via internet access or a
+  pre-populated local repository) for the tests to run successfully.
+
+Before building from source, install the bundled Secure Properties Tool
+into your local Maven repository:
+
+```sh
+mvn install:install-file \
+  -Dfile=src/main/resources/lib/secure-properties-tool-v17/secure-properties-tool-j17.jar \
+  -DgroupId=com.mulesoft.tools \
+  -DartifactId=secure-properties-tool \
+  -Dversion=1.0 \
+  -Dpackaging=jar
+```
+
+This allows Maven to resolve the dependency declared in the `pom.xml`
+without needing internet access.
 
 
 
