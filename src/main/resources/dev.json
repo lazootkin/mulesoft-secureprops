@@ -1,0 +1,8 @@
+{
+  "secure" : {
+    "user" : {
+      "name" : "admin"
+    },
+    "password" : "!secret"
+  }
+}
